@@ -1,5 +1,7 @@
 package com.android_application_architecture.android_architecture_patterns
 
+//
+
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
