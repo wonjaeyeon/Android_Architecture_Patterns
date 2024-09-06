@@ -1,3 +1,5 @@
+# TODO : 하단에 블로그 보고 1.Unit Test, 2.Emulator test, 3.Release APK build, upload 추가하기
+# ref - https://velog.io/@lyh990517/Android-Github-Actions-%EB%A5%BC-%ED%86%B5%ED%95%B4CICD%EB%A5%BC-%EA%B5%AC%EC%B6%95%ED%95%B4%EB%B3%B4%EC%9E%90
 name: Build and local test
 
 on:
