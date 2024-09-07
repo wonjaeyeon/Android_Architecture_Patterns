@@ -1,7 +1,7 @@
-package com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article
+package com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database
 
-import com.android_application_architecture.android_architecture_patterns.data.model.article.Article
-import java.util.*
+
+import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
 
 // Extension function to convert ArticleDataBaseModel to Article
 fun ArticleDataBaseModel.toArticle(): Article {

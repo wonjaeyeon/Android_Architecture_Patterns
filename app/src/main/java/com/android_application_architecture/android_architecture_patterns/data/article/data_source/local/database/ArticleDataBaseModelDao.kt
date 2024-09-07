@@ -1,7 +1,6 @@
-package com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article
+package com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database
 
 import androidx.room.Dao
-import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow

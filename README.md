@@ -14,3 +14,4 @@ Motivated by recommanded App Architecture by google android developers guide for
 
 - [App architecture - Android developers](https://developer.android.com/topic/architecture/intro)
 - [architecture - templates](https://github.com/android/architecture-templates/tree/base)
+- [Compose-Samples - JetNews](https://github.com/android/compose-samples/tree/master/JetNews)

@@ -1,15 +1,12 @@
-package com.android_application_architecture.android_architecture_patterns.data.repository
+package com.android_application_architecture.android_architecture_patterns.data.article.repository
 
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.ArticleDataBaseModel
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.ArticleDataBaseModelDao
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.toArticle
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.toArticleDataBaseModel
-import com.android_application_architecture.android_architecture_patterns.data.model.article.Article
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.ArticleDataBaseModelDao
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.toArticle
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.toArticleDataBaseModel
+import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
-
-
 
 class ArticleModelRepositoryImpl  @Inject constructor(
     private val articleDao: ArticleDataBaseModelDao

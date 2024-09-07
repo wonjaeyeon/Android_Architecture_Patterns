@@ -7,7 +7,6 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.android_application_architecture.android_architecture_patterns.data.model.article.Article
 import com.android_application_architecture.android_architecture_patterns.ui.view_models.articles.ArticleUiState
 import com.android_application_architecture.android_architecture_patterns.ui.view_models.articles.ArticleViewModel
 import java.util.*

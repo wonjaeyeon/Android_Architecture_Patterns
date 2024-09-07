@@ -1,9 +1,11 @@
-package com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.dependency_injection
+package com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.dependency_injection
 
 import android.content.Context
 import androidx.room.Room
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.ArticleDataBaseModelDao
-import com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article.ArticleDatabase
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.ArticleDataBaseModelDao
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.ArticleDatabase
+
+
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

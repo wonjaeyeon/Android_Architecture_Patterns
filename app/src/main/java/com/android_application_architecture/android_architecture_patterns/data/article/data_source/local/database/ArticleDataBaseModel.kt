@@ -1,8 +1,7 @@
-package com.android_application_architecture.android_architecture_patterns.data.data_source.local.database.article
+package com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
 
 // Entity -> Model class for Room Database
 @Entity

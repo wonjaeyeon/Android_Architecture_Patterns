@@ -1,7 +1,8 @@
 package com.android_application_architecture.android_architecture_patterns.domain.use_cases.articles
 
-import com.android_application_architecture.android_architecture_patterns.data.model.article.Article
-import com.android_application_architecture.android_architecture_patterns.data.repository.ArticleModelRepository
+
+import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
+import com.android_application_architecture.android_architecture_patterns.data.article.repository.ArticleModelRepository
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

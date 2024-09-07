@@ -1,6 +1,6 @@
-package com.android_application_architecture.android_architecture_patterns.data.repository
+package com.android_application_architecture.android_architecture_patterns.data.article.repository
 
-import com.android_application_architecture.android_architecture_patterns.data.model.article.Article
+import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
 import kotlinx.coroutines.flow.Flow
 //
 
