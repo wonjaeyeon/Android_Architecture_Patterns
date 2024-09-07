@@ -14,6 +14,7 @@ import kotlin.reflect.KFunction4
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel // need implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
 
 @Composable
 fun ArticlesScreen(
