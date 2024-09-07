@@ -41,6 +41,7 @@ androidx-lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecyc
 
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" } # Default
 
+# Test
 junit = { group = "junit", name = "junit", version.ref = "junit" } # Default
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" } # Default
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" } # Default
@@ -64,7 +65,6 @@ androidx-lifecycle-runtime-compose-android = { group = "androidx.lifecycle", nam
 
 # navigation
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
-
 
 # hilts
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
