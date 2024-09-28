@@ -14,5 +14,3 @@ abstract class ArticleDatabase : RoomDatabase() {
     abstract fun articleDataBaseModelDao(): ArticleDataBaseModelDao
 }
 
-
-

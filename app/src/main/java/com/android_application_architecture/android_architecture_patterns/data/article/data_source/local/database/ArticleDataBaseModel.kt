@@ -16,6 +16,8 @@ data class ArticleDataBaseModel(
     val authorDateOfBirth : String,
     val readTimeMin : Int
     ) {
+    // 이렇게 하면 uid가 자동으로 생성됨
+    // 공식 샘플에서 사용한 방법
     @PrimaryKey(autoGenerate = true)
     var uid: Int = 0
 }
