@@ -1,8 +1,8 @@
 package com.android_application_architecture.android_architecture_patterns.data.article.repository
 
 import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.ArticleDataBaseModelDao
-import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.toArticle
-import com.android_application_architecture.android_architecture_patterns.data.article.data_source.local.database.toArticleDataBaseModel
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.toArticle
+import com.android_application_architecture.android_architecture_patterns.data.article.data_source.toArticleDataBaseModel
 import com.android_application_architecture.android_architecture_patterns.data.article.model.Article
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
