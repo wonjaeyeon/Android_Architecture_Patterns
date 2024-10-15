@@ -1,9 +1,9 @@
-package com.android_application_architecture.android_architecture_patterns.domain.use_cases.dependency_injection
+package com.android_application_architecture.android_architecture_patterns.domain.article.use_cases.dependency_injection
 
 
 import com.android_application_architecture.android_architecture_patterns.data.article.repository.ArticleModelRepository
-import com.android_application_architecture.android_architecture_patterns.domain.use_cases.articles.GetArticleUseCases
-import com.android_application_architecture.android_architecture_patterns.domain.use_cases.articles.InsertArticleUseCases
+import com.android_application_architecture.android_architecture_patterns.domain.article.use_cases.GetArticleUseCases
+import com.android_application_architecture.android_architecture_patterns.domain.article.use_cases.InsertArticleUseCases
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -12,7 +12,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object UseCaseModule {
+object ArticleUseCaseModule {
 
     @Provides
     @Singleton
