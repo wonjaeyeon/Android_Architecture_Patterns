@@ -6,11 +6,11 @@ on:
   push:
     branches:
         - main
-        - google-official-document-mvvm
+        - google-official-mvvm-sample
   pull_request:
     branches:
         - main
-        - google-official-document-mvvm
+        - google-official-mvvm-sample
 
 jobs:
   build:
