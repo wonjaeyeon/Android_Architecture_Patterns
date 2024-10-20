@@ -4,18 +4,21 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
+import androidx.compose.material3.windowsizeclass.ExperimentalMaterial3WindowSizeClassApi
+import androidx.compose.material3.windowsizeclass.calculateWindowSizeClass
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.android_application_architecture.android_architecture_patterns.ui.router.MainNavigation
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.android_application_architecture.android_architecture_patterns.ui.feature.reply.ReplyHomeViewModel
 import com.android_application_architecture.android_architecture_patterns.ui.theme.Android_Architecture_PatternsTheme
+import com.google.accompanist.adaptive.calculateDisplayFeatures
 import dagger.hilt.android.AndroidEntryPoint
 
 // An activity is a single, focused thing that the user can do.
@@ -26,6 +29,8 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
 
         // here you initialize your activity.
@@ -39,7 +44,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainNavigation()
+                    //MainNavigation()
 //                    Scaffold(
 //                        topBar = {
 //                            Text(
@@ -49,6 +54,24 @@ class MainActivity : ComponentActivity() {
 //                        }
 //                    ) {
 //                    }
+                    val windowSize = calculateWindowSizeClass(this)
+                    val displayFeatures = calculateDisplayFeatures(this)
+                    //val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+                    ReplyApp(
+                        windowSize = windowSize,
+                        displayFeatures = displayFeatures,
+                        //replyHomeUIState = uiState,
+//                        closeDetailScreen = {
+//                            //viewModel.closeDetailScreen()
+//                        },
+//                        navigateToDetail = { emailId, pane ->
+//                            //viewModel.setOpenedEmail(emailId, pane)
+//                        },
+//                        toggleSelectedEmail = { emailId ->
+//                            //viewModel.toggleSelectedEmail(emailId)
+//                        }
+                    )
                 }
             }
         }
@@ -64,21 +87,5 @@ class MainActivity : ComponentActivity() {
         super.onStop() // the activity is no longer visible
 
         super.onDestroy() // the activity is finishing or being destroyed by the system
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    Android_Architecture_PatternsTheme {
-        Greeting("Android")
     }
 }

@@ -11,6 +11,7 @@ plugins {
 
     // kapt
     alias(libs.plugins.kotlin.kapt)
+    alias(libs.plugins.kotlin.serialization)
 
     // ksp
     alias(libs.plugins.ksp)
@@ -92,6 +93,23 @@ dependencies {
 
 
     // ADDED DEPENDENCIES
+
+    // Google Accompanist
+    implementation(libs.accompanist.adaptive)
+
+    // Compose Material3
+    implementation(libs.androidx.compose.material3)
+    implementation(libs.androidx.compose.material.iconsExtended)
+    implementation(libs.androidx.compose.material3.adaptive)
+    implementation(libs.androidx.compose.material3.adaptive.layout)
+    implementation(libs.androidx.compose.material3.adaptive.navigation)
+    implementation(libs.androidx.compose.material3.adaptive.navigationSuite)
+    implementation(libs.androidx.compose.materialWindow)
+
+    // window
+    implementation(libs.androidx.window)
+    implementation(libs.androidx.window.core)
+
     // Dagger-Hilt
     implementation(libs.hilt.android)
     implementation(libs.hilt.navigation.compose)
@@ -120,6 +138,8 @@ dependencies {
     // Coroutines
     implementation(libs.kotlinx.coroutines.core)
 
+    // kotlinx serialization
+    implementation(libs.kotlinx.serialization.json)
 
     // Navigation
     implementation(libs.androidx.navigation.compose)
@@ -132,6 +152,8 @@ dependencies {
     androidTestImplementation(libs.androidx.test.core)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.runner)
+
+
 }
 
 // Allow references to generated code
