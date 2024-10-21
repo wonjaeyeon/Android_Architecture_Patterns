@@ -24,7 +24,7 @@ sealed interface Route {
 
 class ReplyNavigationActions(private val navController: NavHostController) {
 
-    fun navigateTo(destination: TopLevelDestination) {
+    fun navigateTo(destination: ReplyTopLevelDestination) {
         navController.navigate(destination.route) {
             // Pop up to the start destination of the graph to
             // avoid building up a large stack of destinations
@@ -43,31 +43,31 @@ class ReplyNavigationActions(private val navController: NavHostController) {
 
 // used with for loop for making navigation components
 val TOP_LEVEL_DESTINATIONS = listOf(
-    TopLevelDestination(
+    ReplyTopLevelDestination(
         route = Route.Inbox,
         selectedIcon = Icons.Default.Info,
         unselectedIcon = Icons.Default.Info,
         iconTextId = R.string.tab_inbox
     ),
-    TopLevelDestination(
+    ReplyTopLevelDestination(
         route = Route.Articles,
         selectedIcon = Icons.Filled.CheckCircle,
         unselectedIcon = Icons.Filled.CheckCircle,
         iconTextId = R.string.tab_article
     ),
-    TopLevelDestination(
+    ReplyTopLevelDestination(
         route = Route.DirectMessages,
         selectedIcon = Icons.Outlined.Search,
         unselectedIcon = Icons.Outlined.Search,
         iconTextId = R.string.tab_inbox
     ),
-    TopLevelDestination(
+    ReplyTopLevelDestination(
         route = Route.Groups,
         selectedIcon = Icons.Default.Menu,
         unselectedIcon = Icons.Default.Menu,
         iconTextId = R.string.tab_article
     ),
-    TopLevelDestination(
+    ReplyTopLevelDestination(
         route = Route.Settings, // Add Settings to the top-level destinations
         selectedIcon = Icons.Default.Settings,
         unselectedIcon = Icons.Default.Settings,

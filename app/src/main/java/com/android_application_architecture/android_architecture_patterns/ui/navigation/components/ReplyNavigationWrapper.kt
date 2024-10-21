@@ -17,7 +17,7 @@ import androidx.navigation.NavDestination
 import androidx.window.core.layout.WindowHeightSizeClass
 import androidx.window.core.layout.WindowSizeClass
 import androidx.window.core.layout.WindowWidthSizeClass
-import com.android_application_architecture.android_architecture_patterns.ui.navigation.TopLevelDestination
+import com.android_application_architecture.android_architecture_patterns.ui.navigation.ReplyTopLevelDestination
 import com.android_application_architecture.android_architecture_patterns.ui.window.ReplyNavigationContentPosition
 import kotlinx.coroutines.launch
 
@@ -34,7 +34,7 @@ class ReplyNavSuiteScope(
 @Composable
 fun ReplyNavigationWrapper(
     currentDestination: NavDestination?,
-    navigateToTopLevelDestination: (TopLevelDestination) -> Unit,
+    navigateToTopLevelDestination: (ReplyTopLevelDestination) -> Unit,
     content: @Composable ReplyNavSuiteScope.() -> Unit
 ) {
     val adaptiveInfo = currentWindowAdaptiveInfo()

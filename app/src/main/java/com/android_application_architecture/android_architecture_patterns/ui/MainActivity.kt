@@ -61,16 +61,6 @@ class MainActivity : ComponentActivity() {
                     ReplyApp(
                         windowSize = windowSize,
                         displayFeatures = displayFeatures,
-                        //replyHomeUIState = uiState,
-//                        closeDetailScreen = {
-//                            //viewModel.closeDetailScreen()
-//                        },
-//                        navigateToDetail = { emailId, pane ->
-//                            //viewModel.setOpenedEmail(emailId, pane)
-//                        },
-//                        toggleSelectedEmail = { emailId ->
-//                            //viewModel.toggleSelectedEmail(emailId)
-//                        }
                     )
                 }
             }

@@ -6,7 +6,7 @@ import androidx.compose.ui.layout.layoutId
 import androidx.compose.ui.unit.offset
 import androidx.navigation.NavDestination
 import androidx.navigation.NavDestination.Companion.hasRoute
-import com.android_application_architecture.android_architecture_patterns.ui.navigation.TopLevelDestination
+import com.android_application_architecture.android_architecture_patterns.ui.navigation.ReplyTopLevelDestination
 import com.android_application_architecture.android_architecture_patterns.ui.window.ReplyNavigationContentPosition
 
 
@@ -53,5 +53,5 @@ enum class LayoutType {
     HEADER, CONTENT
 }
 
-fun NavDestination?.hasRoute(destination: TopLevelDestination): Boolean =
+fun NavDestination?.hasRoute(destination: ReplyTopLevelDestination): Boolean =
     this?.hasRoute(destination.route::class) ?: false

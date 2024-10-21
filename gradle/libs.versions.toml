@@ -18,10 +18,17 @@ accompanist = "0.36.0"
 # navigation
 navigationCompose = "2.8.0"
 
+# androidxWork
+androidxWork = "2.9.1"
+
+# androidxDataStore
+androidxDataStore = "1.1.1"
+
 # hilts
 hilt = "2.52"
 hiltAndroid = "2.52"
 hiltNavigationCompose = "1.2.0"
+hiltExt = "1.2.0"
 
 # room
 androidxRoom = "2.6.1"
@@ -42,7 +49,20 @@ androidxWindow = "1.3.0"
 
 # kotlin
 kotlinxSerializationJson = "1.7.3"
+kotlinxDatetime = "0.5.0"
 kotlinxImmutable = "0.3.8"
+
+# coil
+coil = "2.7.0"
+
+# profileInstaller
+androidxProfileinstaller = "1.4.1"
+
+# protobuf
+protobuf = "4.26.1"
+protobufKotlinLite = "4.26.1"
+protobufJavaLite = "3.18.0"
+protobufPlugin = "0.9.4"
 
 [libraries]
 ## DEFAULT LIBRARIES
@@ -88,13 +108,21 @@ androidx-compose-materialWindow = { module = "androidx.compose.material3:materia
 # navigation
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigationCompose" }
 
+# androidxWork
+androidx-work-ktx = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "androidxWork" }
+androidx-work-testing = { group = "androidx.work", name = "work-testing", version.ref = "androidxWork" }
+
+# androidxDataStore
+androidx-dataStore = { group = "androidx.datastore", name = "datastore", version.ref = "androidxDataStore" }
+
 # hilts
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }
 hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
 hilt-android-testing = { module = "com.google.dagger:hilt-android-testing", version.ref = "hilt" }
 hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
-
+hilt-ext-compiler = { group = "androidx.hilt", name = "hilt-compiler", version.ref = "hiltExt" }
+hilt-ext-work = { group = "androidx.hilt", name = "hilt-work", version.ref = "hiltExt" }
 
 # room
 androidx-room-room-compiler = { module = "androidx.room:room-compiler", version.ref = "androidxRoom" }
@@ -111,6 +139,9 @@ androidx-room-paging = { module = "androidx.room:room-paging", version.ref = "an
 # coroutines
 kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutines" }
+kotlinx-coroutines-guava = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-guava", version.ref = "coroutines" }
+
+
 
 # test
 androidx-test-core = { module = "androidx.test:core", version.ref = "androidxTest" }
@@ -123,6 +154,21 @@ androidx-window-core = { module = "androidx.window:window-core", version.ref = "
 
 # kotlinx-serialization
 kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+# kotlinx-datetime
+kotlinx-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "kotlinxDatetime" }
+
+# coil
+coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
+coil-kt-compose = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+coil-kt-svg = { group = "io.coil-kt", name = "coil-svg", version.ref = "coil" }
+
+# profileInstaller
+androidx-profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "androidxProfileinstaller" }
+
+# protobuf
+protobuf-kotlin-lite = { group = "com.google.protobuf", name = "protobuf-kotlin-lite", version.ref = "protobufKotlinLite" }
+protobuf-java-lite = { group = "com.google.protobuf", name = "protobuf-java-lite", version.ref = "protobufJavaLite" }
+protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref = "protobuf" }
 
 [plugins]
 ## DEFAULT PLUGINS
@@ -145,3 +191,6 @@ ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
 # hilt
 hilt-gradle = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+# protobuf
+protobuf = { id = "com.google.protobuf", version.ref = "protobufPlugin" }

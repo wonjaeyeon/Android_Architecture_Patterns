@@ -20,7 +20,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavDestination
-import com.android_application_architecture.android_architecture_patterns.ui.navigation.TopLevelDestination
+import com.android_application_architecture.android_architecture_patterns.ui.navigation.ReplyTopLevelDestination
 import com.android_application_architecture.android_architecture_patterns.ui.navigation.TOP_LEVEL_DESTINATIONS
 import com.android_application_architecture.android_architecture_patterns.ui.navigation.components.policy.LayoutType
 import com.android_application_architecture.android_architecture_patterns.ui.navigation.components.policy.hasRoute
@@ -33,7 +33,7 @@ import com.android_application_architecture.android_architecture_patterns.ui.win
 fun ModalNavigationDrawerContent(
     currentDestination: NavDestination?,
     navigationContentPosition: ReplyNavigationContentPosition,
-    navigateToTopLevelDestination: (TopLevelDestination) -> Unit,
+    navigateToTopLevelDestination: (ReplyTopLevelDestination) -> Unit,
     onDrawerClicked: () -> Unit = {}
 ) {
     ModalDrawerSheet {

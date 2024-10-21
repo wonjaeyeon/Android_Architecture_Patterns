@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavDestination
-import com.android_application_architecture.android_architecture_patterns.ui.navigation.TopLevelDestination
+import com.android_application_architecture.android_architecture_patterns.ui.navigation.ReplyTopLevelDestination
 import com.android_application_architecture.android_architecture_patterns.ui.navigation.TOP_LEVEL_DESTINATIONS
 import com.android_application_architecture.android_architecture_patterns.ui.navigation.components.policy.hasRoute
 
@@ -16,7 +16,7 @@ import com.android_application_architecture.android_architecture_patterns.ui.nav
 @Composable
 fun ReplyBottomNavigationBar(
     currentDestination: NavDestination?,
-    navigateToTopLevelDestination: (TopLevelDestination) -> Unit
+    navigateToTopLevelDestination: (ReplyTopLevelDestination) -> Unit
 ) {
     NavigationBar(modifier = Modifier.fillMaxWidth()) {
         TOP_LEVEL_DESTINATIONS.forEach { replyDestination ->
