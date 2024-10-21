@@ -3,6 +3,7 @@ package com.android_application_architecture.android_architecture_patterns
 import android.app.Application
 import coil.ImageLoader
 import coil.ImageLoaderFactory
+import com.android_application_architecture.android_architecture_patterns.data.sync.initializers.Sync
 import com.android_application_architecture.android_architecture_patterns.ui.util.ProfileVerifierLogger
 import dagger.hilt.android.HiltAndroidApp
 import javax.inject.Inject

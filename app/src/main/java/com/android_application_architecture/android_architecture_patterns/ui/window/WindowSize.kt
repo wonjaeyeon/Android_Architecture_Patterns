@@ -1,7 +1,0 @@
-package com.android_application_architecture.android_architecture_patterns.ui.window
-
-import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
-import androidx.window.core.layout.WindowHeightSizeClass
-import androidx.window.core.layout.WindowSizeClass
-import androidx.window.core.layout.WindowWidthSizeClass
-

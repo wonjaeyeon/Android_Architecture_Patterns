@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
+import com.android_application_architecture.android_architecture_patterns.data.topic.data_source.local.database.TopicEntity
 
 /**
  * Cross reference for many to many relationship between [NewsResourceEntity] and [TopicEntity]
