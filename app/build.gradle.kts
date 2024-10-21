@@ -203,7 +203,7 @@ dependencies {
     // protobuf
     implementation(libs.protobuf.protoc)
     implementation(libs.protobuf.kotlin.lite)
-    implementation(libs.protobuf.java.lite)
+    //implementation(libs.protobuf.java.lite)
 
     // Local tests: jUnit, coroutines, Android runner
     // JUnit is already added by default
