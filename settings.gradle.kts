@@ -15,4 +15,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "Android_Architecture_Patterns"
 include(":app")
- 
