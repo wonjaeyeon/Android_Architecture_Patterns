@@ -39,6 +39,10 @@ android {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
+//        productFlavors {
+//            create("teclast") {
+//            }
+//        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8 // for example ) hilt uses java 8 features

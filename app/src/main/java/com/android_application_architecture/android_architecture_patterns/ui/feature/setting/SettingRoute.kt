@@ -1,16 +1,23 @@
 package com.android_application_architecture.android_architecture_patterns.ui.feature.setting
 
 
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material3.Button
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.internal.composableLambda
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
-import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.navigation
-import com.android_application_architecture.android_architecture_patterns.ui.navigation.Route
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
+
 import kotlinx.serialization.Serializable
 
 
@@ -21,26 +28,14 @@ sealed interface SettingRoute {
     @Serializable object PrivacySettings : SettingRoute
 }
 
-// Function to add the settings graph
-fun NavGraphBuilder.settingsGraph(navController: NavHostController) {
-    // Start the graph with MainSettings
-    navigation(startDestination = SettingRoute.MainSettings.toString(), route = Route.Settings.toString()) {
-        composable(SettingRoute.MainSettings.toString()) {
-            MainSettingsScreen(navController)
-        }
-        composable(SettingRoute.NotificationSettings.toString()) {
-            NotificationSettingsScreen(navController)
-        }
-        composable(SettingRoute.PrivacySettings.toString()) {
-            PrivacySettingsScreen(navController)
-        }
-    }
+@Composable
+fun FirstSettingScreen() {
+    SettingNavHost()
 }
 
-// Main settings screen
 @Composable
-fun MainSettingsScreen(navController: NavController) {
-    // Add your settings UI here
+fun MainSettingsScreen(navController: NavHostController) {
+// Add your settings UI here
     Column {
         // Button to navigate to Notification Settings
         Button(onClick = { navController.navigate(SettingRoute.NotificationSettings.toString()) }) {
@@ -53,14 +48,44 @@ fun MainSettingsScreen(navController: NavController) {
     }
 }
 
-// Notification settings screen
 @Composable
-fun NotificationSettingsScreen(navController: NavController) {
-    // UI for notification settings
+fun NotificationSettingsScreen(navController: NavHostController) {
+    Column {
+        // Add your notification settings UI here
+        Text("Notification Settings", fontSize = 36.sp, color = Color.White)
+    }
 }
+
 
 // Privacy settings screen
 @Composable
 fun PrivacySettingsScreen(navController: NavController) {
     // UI for privacy settings
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+
+
+        Text(text = "Profile", fontSize = 36.sp, color = Color.White)
+
+    }
 }
+
+
+// Navigation graph for the settings
+@Composable
+fun SettingNavHost(navController: NavHostController = rememberNavController()) {
+    NavHost(navController = navController, startDestination = SettingRoute.MainSettings.toString()) {
+        composable(SettingRoute.MainSettings.toString()) {
+            MainSettingsScreen(navController)
+        }
+        composable(SettingRoute.NotificationSettings.toString()) {
+            NotificationSettingsScreen(navController)
+        }
+        composable(SettingRoute.PrivacySettings.toString()) {
+            PrivacySettingsScreen(navController)
+        }
+    }
+}
+

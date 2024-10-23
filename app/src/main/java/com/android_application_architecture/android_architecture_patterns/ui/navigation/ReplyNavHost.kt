@@ -52,21 +52,9 @@ fun ReplyNavHost(
         composable<Route.Groups> {
             EmptyComingSoon()
         }
-//        navigation<Route.Settings>(startDestination = SettingRoute.MainSettings,) {
-//            composable<SettingRoute.MainSettings> {
-//                MainSettingsScreen(navController)
-//            }
-//
-//            composable<SettingRoute.NotificationSettings> {
-//                NotificationSettingsScreen(navController)
-//            }
-//
-//            composable<SettingRoute.PrivacySettings> {
-//                PrivacySettingsScreen(navController)
-//            }
-//        }
+
         composable<Route.Settings> {
-            MainSettingsScreen(navController)
+            FirstSettingScreen()
         }
 
     }
